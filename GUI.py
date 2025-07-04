@@ -38,30 +38,30 @@ hunter_journal_kills = {
     "Mosskin": [0, 25, "Greenpath"],
     "Volatile Mosskin": [0, 25, "Greenpath"],
     "Fool Eater": [0, 15, "Greenpath"],
-    "Squit": [0, 25, "Fog Canyon"],
-    "Obble": [0, 20, "Fog Canyon"],
+    "Squit": [0, 25, "Greenpath"],
+    "Obble": [0, 20, "Greenpath"],
     "Gulka": [0, 15, "Greenpath"],
-    "Maskfly": [0, 15, "Fog Canyon"],
+    "Maskfly": [0, 15, "Greenpath"],
     "Moss Charger": [0, 15, "Greenpath"],
     "Massive Moss Charger": [0, 1, "Greenpath"],
     "Moss Knight": [0, 8, "Greenpath"],
     "Mossy Vagabond": [0, 10, "Greenpath"],
-    "Durandoo": [0, 8, "Fog Canyon"],
+    "Durandoo": [0, 8, "Greenpath"],
     "Duranda": [0, 8, "Fog Canyon"],
     "Aluba": [0, 1, "Queen's Garden"],
     "Charged Lumafly": [0, 1, "Fog Canyon"],
     "Uoma": [0, 20, "Fog Canyon"],
     "Ooma": [0, 12, "Fog Canyon"],
     "Uumuu": [0, 1, "Fog Canyon"],
-    "Ambloom": [0, 15, "Fog Canyon"],
+    "Ambloom": [0, 15, "Fungal Wastes"],
     "Fungling": [0, 30, "Fungal Wastes"],
     "Fungoon": [0, 20, "Fungal Wastes"],
     "Sporg": [0, 20, "Fungal Wastes"],
     "Void Tendrils": [0, 1, "Ancient Basin"],
-    "Shade": [0, 1, "Various"],
+    "Shade": [0, 1, "The Birthplace"],
     "Hunter's Mark": [0, 1, "Hunter's Journal"],
     "Belfly": [0, 1, "Forgotten Crossroads"],
-    "Bluggsac": [0, 1, "Fog Canyon"],
+    "Bluggsac": [0, 1, "Multiple Locations"],
     "Boofly": [0, 20, "Kingdom's Edge"],
     "Brooding Mawlek": [0, 1, "Forgotten Crossroads"],
     "Carver Hatcher": [0, 15, "Deepnest"],
@@ -84,14 +84,13 @@ hunter_journal_kills = {
     "Gorgeous Husk": [0, 1, "City of Tears"],
     "Great Hopper": [0, 10, "Forgotten Crossroads"],
     "Great Husk Sentry": [0, 10, "City of Tears"],
-    "Heavy Fool": [0, 20, "Colosseum of Fools"],
     "Heavy Sentry": [0, 20, "City of Tears"],
     "Hive Guardian": [0, 12, "The Hive"],
     "Hive Knight": [0, 1, "The Hive"],
     "Hive Soldier": [0, 15, "The Hive"],
     "Hopper": [0, 25, "Forgotten Crossroads"],
     "Husk Dandy": [0, 25, "City of Tears"],
-    "Husk Hive": [0, 10, "City of Tears"],
+    "Husk Hive": [0, 10, "The Hive"],
     "Husk Miner": [0, 20, "Crystal Peak"],
     "Hwurmp": [0, 20, "Deepnest"],
     "Infected Balloon": [0, 10, "Forgotten Crossroads"],
@@ -107,9 +106,9 @@ hunter_journal_kills = {
     "Mistake": [0, 25, "Soul Sanctum"],
     "Folly": [0, 15, "Soul Sanctum"],
     "Nosk": [0, 1, "Deepnest"],
-    "Oblobbles": [0, 3, "Colosseum of Fools"],
+    "Oblobble": [0, 3, "Colosseum of Fools"],
     "Pale Lurker": [0, 1, "Colosseum of Fools"],
-    "Pilflip": [0, 20, "Fog Canyon"],
+    "Pilflip": [0, 20, "Royal Waterways"],
     "Primal Aspid": [0, 25, "Kingdom's Edge"],
     "Royal Retainer": [0, 10, "White Palace"],
     "Shadow Creeper": [0, 20, "Deepnest"],
@@ -124,9 +123,9 @@ hunter_journal_kills = {
     "Spiny Husk": [0, 20, "City of Tears"],
     "Stalking Devout": [0, 15, "Deepnest"],
     "Sturdy Fool": [0, 25, "Colosseum of Fools"],
-    "Traitor Lord": [0, 1, "Queen's Gardens"],
+    "Traitor Lord": [0, 1, "Queen's Garden"],
     "Volt Twister": [0, 6, "Soul Sanctum"],
-    "Watcher Knight": [0, 1, "Watcher's Spire"],
+    "Watcher Knight": [0, 1, "City of Tears"],
     "Winged Fool": [0, 25, "Colosseum of Fools"],
     "Winged Sentry": [0, 30, "City of Tears"],
     "Wingmould": [0, 10, "White Palace"],
@@ -137,14 +136,14 @@ hunter_journal_kills = {
     "Cowardly Husk": [0, 25, "City of Tears"],
     "Gluttonous Husk": [0, 25, "City of Tears"],
     "Collector": [0, 1, "City of Tears"],
-    "Furious Vengefly": [0, 15, "Infected Crossroads"],
+    "Furious Vengefly": [0, 15, "Ancient Basin"],
     "Volatile Gruzzer": [0, 25, "Greenpath"],
     "Violent Husk": [0, 15, "Infected Crossroads"],
     "Slobbering Husk": [0, 15, "Infected Crossroads"],
     "Lesser Mawlek": [0, 10, "Ancient Basin"],
     "Stalking Devout": [0, 15, "Deepnest"],
     "Carver Hatcher": [0, 15, "Deepnest"],
-    "Hiveling": [0, 30, "Kingdom's Edge,"],
+    "Hiveling": [0, 30, "The Hive"],
     "Grub Mimic": [0, 5, "Multiple Locations"],
     "Mawlurk": [0, 10, "Ancient Basin"],
     "Lightseed": [0, 20, "Infected Crossroads"],
@@ -154,7 +153,7 @@ hunter_journal_kills = {
     "Elder Hu": [0, 1, "Fungal Wastes"],
     "Xero": [0, 1, "Resting Grounds"],
     "Gorb": [0, 1, "Howling Cliffs"],
-    "Marmu": [0, 1, "Queen's Gardens"],
+    "Marmu": [0, 1, "Queen's Garden"],
     "No Eyes": [0, 1, "Greenpath"],
     "Markoth": [0, 1, "Kingdom's Edge"],
     "Galien": [0, 1, "Deepnest"],
@@ -177,15 +176,22 @@ def update_kill_count():
             raise FileNotFoundError("current_save.json not found!")
         with open(save_path, "r", encoding="utf-8") as f:
             save_data = json.load(f)
+
         # Build a lookup for game_name -> kill_count
         kill_lookup = {entry["game_name"]: entry["kill_count"] for entry in save_data}
 
-        # Update hunter_journal_kills
+        # Update hunter_journal_kills with actual kill counts while preserving location info
         global hunter_journal_kills
         for enemy, values in hunter_journal_kills.items():
             required_kills = values[1]
+            location = values[2] if len(values) > 2 else "Unknown"
             kill_count = kill_lookup.get(enemy, 0)
+            # Update the kill count (difference from required)
             values[0] = abs(kill_count - required_kills)
+            # Preserve required kills and location
+            values[1] = required_kills
+            values[2] = location
+
         return True
     except Exception as e:
         print(f"Error updating kill count: {e}")
@@ -465,15 +471,7 @@ def create_main_gui(root):
         if search_text == "search..." or search_text == "":
             search_text = ""
 
-
         filtered = [m for m in all_monsters if search_text in m[0].lower()]
-
-        if search_text and len(filtered) == 0:
-            print(f"No results found for '{search_text}'")
-            # Show all monster names for debugging
-            print(
-                "Available monsters:", [m[0] for m in all_monsters[:5]]
-            )  # First 5 for brevity
 
         if selected_location[0] != "All":
             filtered = [m for m in filtered if m[1][2].strip() == selected_location[0]]
