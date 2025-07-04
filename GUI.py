@@ -170,7 +170,7 @@ first_startup = False
 def update_kill_count():
     try:
         # read the current save file
-        current_savefile()
+        current_savefile(input_file)
         # Load current_save.json
         save_path = os.path.join(os.path.dirname(__file__), "current_save.json")
         if not os.path.exists(save_path):
@@ -564,10 +564,14 @@ def create_main_gui(root):
 
     root.mainloop()
 
+input_file = r'' #save file path
 
-def main():
+def main(save_file_path):
     """Main function that handles initial setup and error checking"""
     root = tk.Tk()
+
+    global input_file
+    input_file = save_file_path
 
     # Try to load save file on startup
     if not first_startup:
@@ -584,5 +588,3 @@ def main():
     root.mainloop()
 
 
-if __name__ == "__main__":
-    main()

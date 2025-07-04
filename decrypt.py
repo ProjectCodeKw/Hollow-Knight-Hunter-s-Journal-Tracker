@@ -1,9 +1,12 @@
 import base64
 from Crypto.Cipher import AES
 
-def decrypt_savefile():
+# this script was referenced from github user:
+# https://github.com/ReznoRMichael/hollow-knight-completion-check
+# and https://github.com/bloodorca/hollow
 
-    input_file = r'C:\Users\User\AppData\LocalLow\Team Cherry\Hollow Knight\user2.dat'
+def decrypt_savefile(input_file):
+
     output_file = 'decrypted.json'
 
     CSHARP_HEADER = bytes([
