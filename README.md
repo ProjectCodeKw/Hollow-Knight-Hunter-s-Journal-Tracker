@@ -140,8 +140,10 @@ This project is for educational and personal use. Hollow Knight is a trademark o
 
 ## Credits
 - Github Repos: # this script was referenced from github user:
---> https://github.com/ReznoRMichael/hollow-knight-completion-check
---> https://github.com/bloodorca/hollow
+  
+   -- https://github.com/ReznoRMichael/hollow-knight-completion-check
+   -- https://github.com/bloodorca/hollow
+  
 - **Hollow Knight**: Developed by Team Cherry
 - **Enemy Data**: Based on official Hunter Journal Wiki
 - **Images**: From Hollow Knight Wiki (Fandom)
