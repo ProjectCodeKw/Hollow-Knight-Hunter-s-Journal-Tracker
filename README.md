@@ -1,10 +1,12 @@
 # Hollow Knight Hunter Journal GUI
 
-A Python-based GUI application for tracking enemy kills and completion progress in Hollow Knight. This tool helps players monitor their Hunter Journal progress by reading save files and displaying kill counts in a user-friendly interface.
+I was going INSANE wanted that COMPLETE hunter achievement but there was no way for me to keep track of how many kills i need for each enemy and how many i have left ;(
+Thats why i used a little bit of that Pyyyy magic and now i have an external friendly mod that keeps track of my deadly habbits (killing bugs)...
+
+Ok now some technical details 🐧
 
 ## Features
 
-- **Real-time Save File Reading**: Automatically reads and decrypts Hollow Knight save files
 - **Interactive GUI**: Built with Tkinter for easy navigation and filtering
 - **Enemy Tracking**: Tracks all 156+ enemies from the Hunter Journal
 - **Location Filtering**: Filter enemies by region/location
@@ -24,6 +26,7 @@ A Python-based GUI application for tracking enemy kills and completion progress 
    ```bash
    python GUI.py
    ```
+ORRRR run the .exe/.bat file... more on it below
 
 ## Requirements
 
@@ -31,22 +34,6 @@ A Python-based GUI application for tracking enemy kills and completion progress 
 - Tkinter (usually included with Python)
 - requests
 - Pillow
-
-## File Structure
-
-```
-HollowKnight/
-├── GUI.py                 # Main GUI application
-├── read_savefile.py       # Save file reader and processor
-├── decrypt.py            # Save file decryption utility
-├── enemies.json          # Enemy database with kill requirements
-├── current_save.json     # Current save file data (generated)
-├── decrypted.json        # Decrypted save file (generated)
-├── images/               # Enemy images directory
-├── maps/                 # Enemy map images directory
-├── requirements.txt      # Python dependencies
-└── README.md            # This file
-```
 
 ## Usage
 
@@ -63,54 +50,11 @@ HollowKnight/
 - Before running it change the input_file variable to your actual savefile path
 - To find your save file [Click Here](https://example.com)
 
-### Main GUI (GUI.py)
-
-- **Launch**: Run `python GUI.py`
-- **Refresh**: Click the refresh button (↻) to update kill counts
-- **Search**: Use the search bar to find specific enemies
-- **Filter**: Use the "Location" button to filter by region
-- **Sort**: Toggle between "most completed" and "least completed"
-- **Scroll**: Use the scroll bar or up arrow (↑) to navigate
-
-### Save File Reading (read_savefile.py)
-
-- **Purpose**: Reads and processes Hollow Knight save files
-- **Output**: Generates `current_save.json` with current kill counts
-- **Usage**: Run `python read_savefile.py` to update save data
-
-## Configuration
-
 ### Enemy Data
+This was the hardest part since the enemy names are different in the savefile from their actual names. Literally spend HOURS guessing, AI-ing and questoning WHAT THE HELL IS kellingPrayerSlug turns out its the two maggots... apperantly they prey to you before you kill them lol. Also AI SUCKS Gemini, DeepAI and ChatGPT were useless when mapping, ceativity is human's only superpower. 
 
 - Edit `enemies.json` to modify enemy names, locations, or required kill counts
 - Each enemy entry contains: `code_name`, `game_name`, and `kill_count`
-
-### Save File Path
-
-- Update the save file path in `decrypt.py` if your Hollow Knight save is in a different location
-- Default location: Steam userdata directory
-
-## Features in Detail
-
-### Hunter Journal Integration
-
-- Tracks all enemies from the official Hunter Journal
-- Shows required kills vs. actual kills
-- Displays completion percentage
-
-### Visual Interface
-
-- Clean, modern design with Calibri font
-- Color-coded completion status
-- Enemy images with proper scaling
-- Responsive layout
-
-### Data Management
-
-- Automatic save file decryption
-- Real-time kill count updates
-- Persistent data storage
-- Error handling for missing files
 
 ## Troubleshooting
 
