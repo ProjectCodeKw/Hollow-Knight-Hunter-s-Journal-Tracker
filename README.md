@@ -3,6 +3,9 @@
 I was going INSANE wanted that COMPLETE hunter achievement but there was no way for me to keep track of how many kills i need for each enemy and how many i have left ;(
 Thats why i used a little bit of that Pyyyy magic and now i have an external friendly mod that keeps track of my deadly habbits (killing bugs)...
 
+![Hollow Knight Tracker](images/hollow_knight.png)
+_Track your Hunter Journal progress with this external GUI tool_
+
 Ok now some technical details 🐧
 
 ## Features
@@ -15,6 +18,17 @@ Ok now some technical details 🐧
 - **Visual Indicators**: Shows enemy images and completion status
 - **Auto-refresh**: Update kill counts from current save file
 
+### Screenshots
+
+![Main Interface](images/hollow_knight.png)
+_Main interface showing enemy list with kill counts_
+
+![Enemy Details](images/false_knight.png)
+_Example: False Knight tracking_
+
+![Search Feature](images/vengefly.png)
+_Search functionality in action_
+
 ## Installation
 
 1. **Clone or download** this repository
@@ -26,7 +40,7 @@ Ok now some technical details 🐧
    ```bash
    python GUI.py
    ```
-ORRRR run the .exe/.bat file... more on it below
+   ORRRR run the .exe/.bat file... more on it below
 
 ## Requirements
 
@@ -37,7 +51,12 @@ ORRRR run the .exe/.bat file... more on it below
 
 ## Usage
 
-### START.exe or START.bat
+### Quick Start Options
+
+![Executable Files](images/hollow_knight.png)
+_Choose your preferred way to run the tracker_
+
+#### START.exe or START.bat
 
 - If you dont have Python installed run this as a normal program :D
 - Before you start the program insert your savefile path into the text file named: HK_savefilepath.txt without any spacing or extra characters or quotation
@@ -51,9 +70,16 @@ ORRRR run the .exe/.bat file... more on it below
 - To find your save file [Click Here](https://youtu.be/k8hdP-Um9ls)
 
 ### Enemy Data
+
 This was the hardest part since the enemy names are different in the savefile from their actual names. Literally spent HOURS guessing, AI-ing and questoning WHAT THE HELL IS kellingPrayerSlug turns out its the two maggots... apperantly they prey to you before you kill them lol. Also AI SUCKS Gemini, DeepAI and ChatGPT were useless when mapping, ceativity is human's only superpower afterall.
 
 P.S. thats why if there is a miss naming please tell me ;)
+
+#### Sample Enemies Tracked
+
+![Various Enemies](images/gruz_mother.png) ![Various Enemies](images/mantis_lords.png) ![Various Enemies](images/soul_master.png)
+
+_From left to right: Gruz Mother, Mantis Lords, Soul Master_
 
 - Edit `enemies.json` to modify enemy names, locations, or required kill counts
 - Each enemy entry contains: `code_name`, `game_name`, and `kill_count`
@@ -98,11 +124,12 @@ Feel free to contribute improvements:
 This project is for educational and personal use. Hollow Knight is a trademark of Team Cherry.
 
 ## Credits
+
 - **Github Repos** that helped me decrypt the savefile:
-  
-   -- https://github.com/ReznoRMichael/hollow-knight-completion-check
-   -- https://github.com/bloodorca/hollow
-  
+
+  -- https://github.com/ReznoRMichael/hollow-knight-completion-check
+  -- https://github.com/bloodorca/hollow
+
 - **Hollow Knight**: Developed by Team Cherry
 - **Enemy Data**: Based on official Hunter Journal Wiki
 - **Images**: From Hollow Knight Wiki (Fandom)
