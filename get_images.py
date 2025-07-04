@@ -36,7 +36,7 @@ hunter_journal_kills = {
     "Mossfly": [0, 25, "Greenpath"],
     "Mosskin": [0, 25, "Greenpath"],
     "Volatile Mosskin": [0, 25, "Greenpath"],
-    "Fool Eater": [0, 15, "Fog Canyon"],
+    "Fool Eater": [0, 15, "Greenpath"],
     "Squit": [0, 25, "Fog Canyon"],
     "Obble": [0, 20, "Fog Canyon"],
     "Gulka": [0, 15, "Fog Canyon"],

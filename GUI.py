@@ -37,7 +37,7 @@ hunter_journal_kills = {
     "Mossfly": [0, 25, "Greenpath"],
     "Mosskin": [0, 25, "Greenpath"],
     "Volatile Mosskin": [0, 25, "Greenpath"],
-    "Fool Eater": [0, 15, "Fog Canyon"],
+    "Fool Eater": [0, 15, "Greenpath"],
     "Squit": [0, 25, "Fog Canyon"],
     "Obble": [0, 20, "Fog Canyon"],
     "Gulka": [0, 15, "Fog Canyon"],
@@ -461,11 +461,20 @@ def create_main_gui(root):
         for widget in scrollable_frame.winfo_children():
             widget.destroy()
 
-        search_text = search_var.get().lower()
-        if search_text == "search...":
+        search_text = search_var.get().lower().strip()
+        if search_text == "search..." or search_text == "":
             search_text = ""
+
+
         filtered = [m for m in all_monsters if search_text in m[0].lower()]
-        # Apply location filter
+
+        if search_text and len(filtered) == 0:
+            print(f"No results found for '{search_text}'")
+            # Show all monster names for debugging
+            print(
+                "Available monsters:", [m[0] for m in all_monsters[:5]]
+            )  # First 5 for brevity
+
         if selected_location[0] != "All":
             filtered = [m for m in filtered if m[1][2].strip() == selected_location[0]]
         # Sort by (Defeated - Required kills) difference
@@ -544,8 +553,14 @@ def create_main_gui(root):
     def clear_search_placeholder(event):
         if search_entry.get() == "Search...":
             search_entry.delete(0, tk.END)
+            search_var.set("")  # Clear the variable as well
+
+    def restore_search_placeholder(event):
+        if search_entry.get() == "":
+            search_entry.insert(0, "Search...")
 
     search_entry.bind("<FocusIn>", clear_search_placeholder)
+    search_entry.bind("<FocusOut>", restore_search_placeholder)
 
     # Initial population
     update_monster_list()
@@ -564,12 +579,13 @@ def create_main_gui(root):
 
     root.mainloop()
 
-input_file = r'' #save file path
+
+input_file = r""  # save file path
+
 
 def main():
     """Main function that handles initial setup and error checking"""
     root = tk.Tk()
-
 
     # Try to load save file on startup
     if not first_startup:
@@ -584,5 +600,3 @@ def main():
         create_main_gui(root)
 
     root.mainloop()
-
-
