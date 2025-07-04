@@ -139,7 +139,7 @@ Feel free to contribute improvements:
 This project is for educational and personal use. Hollow Knight is a trademark of Team Cherry.
 
 ## Credits
-- Github Repos: # this script was referenced from github user:
+- Github Repos that helped me decrupt the savefile:
   
    -- https://github.com/ReznoRMichael/hollow-knight-completion-check
    -- https://github.com/bloodorca/hollow
