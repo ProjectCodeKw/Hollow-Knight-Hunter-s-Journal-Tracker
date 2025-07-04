@@ -51,7 +51,8 @@ ORRRR run the .exe/.bat file... more on it below
 - To find your save file [Click Here](https://example.com)
 
 ### Enemy Data
-This was the hardest part since the enemy names are different in the savefile from their actual names. Literally spend HOURS guessing, AI-ing and questoning WHAT THE HELL IS kellingPrayerSlug turns out its the two maggots... apperantly they prey to you before you kill them lol. Also AI SUCKS Gemini, DeepAI and ChatGPT were useless when mapping, ceativity is human's only superpower. 
+This was the hardest part since the enemy names are different in the savefile from their actual names. Literally spent HOURS guessing, AI-ing and questoning WHAT THE HELL IS kellingPrayerSlug turns out its the two maggots... apperantly they prey to you before you kill them lol. Also AI SUCKS Gemini, DeepAI and ChatGPT were useless when mapping, ceativity is human's only superpower. 
+P.S. thats why if there is a miss naming please tell me ;)
 
 - Edit `enemies.json` to modify enemy names, locations, or required kill counts
 - Each enemy entry contains: `code_name`, `game_name`, and `kill_count`
