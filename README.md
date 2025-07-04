@@ -3,8 +3,17 @@
 I was going INSANE wanted that COMPLETE hunter achievement but there was no way for me to keep track of how many kills i need for each enemy and how many i have left ;(
 Thats why i used a little bit of that Pyyyy magic and now i have an external friendly mod that keeps track of my deadly habbits (killing bugs)...
 
-![Hollow Knight Tracker](images/hollow_knight.png)
-_Track your Hunter Journal progress with this external GUI tool_
+### Screenshots
+
+![Main Interface](gitImages/bench.png)
+_Main interface showing enemy list with kill counts_
+
+![Enemy Details](gitImages/filter.png)
+_Example: Filtering_
+
+![Search Feature](gitImages/search.png)
+_Search functionality_
+
 
 Ok now some technical details 🐧
 
@@ -18,16 +27,6 @@ Ok now some technical details 🐧
 - **Visual Indicators**: Shows enemy images and completion status
 - **Auto-refresh**: Update kill counts from current save file
 
-### Screenshots
-
-![Main Interface](images/hollow_knight.png)
-_Main interface showing enemy list with kill counts_
-
-![Enemy Details](images/false_knight.png)
-_Example: False Knight tracking_
-
-![Search Feature](images/vengefly.png)
-_Search functionality in action_
 
 ## Installation
 
