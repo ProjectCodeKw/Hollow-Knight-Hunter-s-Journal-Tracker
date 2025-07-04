@@ -3,9 +3,9 @@ from decrypt import decrypt_savefile
 import os
 
 
-def current_savefile(input_file):
+def current_savefile():
     # Step 1: Decrypt the save file (produces decrypted.json)
-    decrypt_savefile(input_file)
+    decrypt_savefile()
 
     # Step 2: Load enemies.json
     with open(

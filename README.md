@@ -50,6 +50,19 @@ HollowKnight/
 
 ## Usage
 
+### START.exe or START.bat
+
+- If you dont have Python installed run this as a normal program :D
+- Before you start the program insert your savefile path into the text file named: HK_savefilepath.txt without any spacing or extra characters or quotation
+- If you wanna use another save file change the value within that textfile
+- If an error occurs try running it with administration access because it needs to read your current savefile
+
+### START.py
+
+- Run this script to start the GUI overlay
+- Before running it change the input_file variable to your actual savefile path
+- To find your save file [Click Here](https://example.com)
+
 ### Main GUI (GUI.py)
 
 - **Launch**: Run `python GUI.py`
@@ -139,9 +152,10 @@ Feel free to contribute improvements:
 This project is for educational and personal use. Hollow Knight is a trademark of Team Cherry.
 
 ## Credits
+
 - Github Repos: # this script was referenced from github user:
---> https://github.com/ReznoRMichael/hollow-knight-completion-check
---> https://github.com/bloodorca/hollow
+  --> https://github.com/ReznoRMichael/hollow-knight-completion-check
+  --> https://github.com/bloodorca/hollow
 - **Hollow Knight**: Developed by Team Cherry
 - **Enemy Data**: Based on official Hunter Journal Wiki
 - **Images**: From Hollow Knight Wiki (Fandom)
