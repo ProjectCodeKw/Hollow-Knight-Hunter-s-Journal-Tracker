@@ -110,7 +110,7 @@ hunter_journal_kills = {
     "Pale Lurker": [0, 1, "Colosseum of Fools"],
     "Pilflip": [0, 20, "Royal Waterways"],
     "Primal Aspid": [0, 25, "Kingdom's Edge"],
-    "Royal Retainer": [0, 10, "White Palace"],
+    "Royal Retainer": [0, 1, "White Palace"],
     "Shadow Creeper": [0, 20, "Ancient Basin"],
     "Sharp Baldur": [0, 20, "Colosseum of Fools"],
     "Shardmite": [0, 15, "Crystal Peak"],
@@ -187,7 +187,17 @@ def update_kill_count():
             location = values[2] if len(values) > 2 else "Unknown"
             kill_count = kill_lookup.get(enemy, 0)
             # Update the kill count (difference from required)
-            values[0] = abs(kill_count - required_kills)
+
+            # check for the case that the enemy does not require a kill but you can kill it
+            # there is a change in the royal retainer enemy, it used to require 9 kills now only 1 but in the save file its still 9
+            if enemy == 'Royal Retainer' and kill_count < 10:
+                values[0] = 1 # killed
+            elif required_kills == 0 and kill_count > 0:
+                values[0] = 0 # not yet killed
+            elif required_kills == 0 and kill_count == 0:
+                values[0] = 1 # killed
+            else:
+                values[0] = abs(kill_count - required_kills) # requires killing and the requires kills != 0
             # Preserve required kills and location
             values[1] = required_kills
             values[2] = location

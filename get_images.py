@@ -117,7 +117,7 @@ hunter_journal_kills = {
     "Pale Lurker": [0, 1, "Colosseum of Fools"],
     "Pilflip": [0, 20, "Royal Waterways"],
     "Primal Aspid": [0, 25, "Kingdom's Edge"],
-    "Royal Retainer": [0, 9, "White Palace"],
+    "Royal Retainer": [0, 1, "White Palace"],
     "Shadow Creeper": [0, 20, "Ancient Basin"],
     "Sharp Baldur": [0, 20, "Greenpath"],
     "Shardmite": [0, 15, "Crystal Peak"],
