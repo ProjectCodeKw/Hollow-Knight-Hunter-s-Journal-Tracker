@@ -11,7 +11,7 @@ import json
 
 # Hunter Journal data
 hunter_journal_kills = {
-    "Crawlid": [0, 0, "Forgotten Crossroads"],
+    "Crawlid": [0, 1, "Forgotten Crossroads"],
     "Vengefly": [0, 45, "Forgotten Crossroads"],
     "Vengefly King": [0, 2, "Forgotten Crossroads"],
     "Gruzzer": [0, 25, "Forgotten Crossroads"],
@@ -132,7 +132,7 @@ hunter_journal_kills = {
     "Hollow Knight": [0, 1, "Forgotten Crossroads"],
     "Menderbug": [0, 0, "Forgotten Crossroads"],
     "Fungified Husk": [0, 10, "Fungal Wastes"],
-    "Lost Kin": [0, 0, "Ancient Basin"],
+    "Lost Kin": [0, 1, "Ancient Basin"],
     "Cowardly Husk": [0, 25, "City of Tears"],
     "Gluttonous Husk": [0, 25, "City of Tears"],
     "Collector": [0, 1, "City of Tears"],
