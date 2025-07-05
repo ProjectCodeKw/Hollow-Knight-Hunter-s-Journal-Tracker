@@ -291,13 +291,35 @@ def create_main_gui(root):
     root.title("Hunter Journal Guide")
     root.geometry("250x500")
     root.resizable(False, True)
+    root.overrideredirect(True)  # Remove title bar
     bg = "#d6d6d6"
     # Configure dark green background with light green border
     root.configure(bg="#1a4d1a")
 
+    # Add drag functionality
+    def start_move(event):
+        root.x = event.x
+        root.y = event.y
+
+    def stop_move(event):
+        root.x = None
+        root.y = None
+
+    def do_move(event):
+        deltax = event.x - root.x
+        deltay = event.y - root.y
+        x = root.winfo_x() + deltax
+        y = root.winfo_y() + deltay
+        root.geometry(f"+{x}+{y}")
+
     # Create main frame with light green border
     main_frame = tk.Frame(root, bg=bg)
     main_frame.pack(fill="both", expand=True, padx=2, pady=2)
+
+    # Bind drag events to the main frame
+    main_frame.bind("<Button-1>", start_move)
+    main_frame.bind("<ButtonRelease-1>", stop_move)
+    main_frame.bind("<B1-Motion>", do_move)
 
     # Title label - smaller and fixed at top
     title_label = tk.Label(
