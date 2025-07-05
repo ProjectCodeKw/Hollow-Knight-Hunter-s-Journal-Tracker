@@ -130,7 +130,7 @@ hunter_journal_kills = {
     "Winged Sentry": [0, 30, "City of Tears"],
     "Wingmould": [0, 1, "White Palace"],
     "Hollow Knight": [0, 1, "Forgotten Crossroads"],
-    "Menderbug": [0, 1, "Forgotten Crossroads"],
+    "Menderbug": [0, 0, "Forgotten Crossroads"],
     "Fungified Husk": [0, 10, "Fungal Wastes"],
     "Lost Kin": [0, 0, "Ancient Basin"],
     "Cowardly Husk": [0, 25, "City of Tears"],
