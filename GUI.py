@@ -60,7 +60,7 @@ hunter_journal_kills = {
     "Void Tendrils": [0, 1, "Ancient Basin"],
     "Shade": [0, 1, "The Birthplace"],
     "Hunter's Mark": [0, 1, "Hunter's Journal"],
-    "Belfly": [0, 1, "Forgotten Crossroads"],
+    "Belfly": [0, 15, "Forgotten Crossroads"],
     "Bluggsac": [0, 1, "Multiple Locations"],
     "Boofly": [0, 20, "Kingdom's Edge"],
     "Brooding Mawlek": [0, 1, "Forgotten Crossroads"],
@@ -190,14 +190,27 @@ def update_kill_count():
 
             # check for the case that the enemy does not require a kill but you can kill it
             # there is a change in the royal retainer enemy, it used to require 9 kills now only 1 but in the save file its still 9
-            if enemy == 'Royal Retainer' and kill_count < 10:
-                values[0] = 1 # killed
-            elif required_kills == 0 and kill_count > 0:
-                values[0] = 0 # not yet killed
-            elif required_kills == 0 and kill_count == 0:
-                values[0] = 1 # killed
+            if (enemy == 'Royal Retainer' and kill_count < 19) \
+                or (enemy == "Void Tendrils" and kill_count < 9) \
+                    or (enemy == "Watcher Knight" and kill_count < 9) \
+                        or (enemy == "Void Tendrils" and kill_count < 9)\
+                             or (enemy == "Goam" and kill_count < 9) \
+                                or (enemy == "Wingmould" and kill_count < 9) \
+                                    or ((enemy == "Bluggsac" and kill_count < 4))\
+                                    or   (enemy == "Hunter's Mark" and kill_count < 1) \
+                                        or   (enemy == "Shade" and kill_count < 1)\
+                                            or   (enemy == "Aluba" and kill_count < 1):
+                values[0] = 1 #special cases
+            elif enemy == 'Aspid Mother':
+                import math
+                # aspid mother does not have a savefile name it counts on the aspid hatchiling but only 15 are required (hatchelings need 30)
+                values[0] = abs( math.floor( (kill_lookup.get('Aspid Hatchling', 0)/2)) - required_kills)
+            elif required_kills == 1 and kill_count > 0:
+                values[0] = 0
             else:
+                print(enemy, kill_count,required_kills)
                 values[0] = abs(kill_count - required_kills) # requires killing and the requires kills != 0
+
             # Preserve required kills and location
             values[1] = required_kills
             values[2] = location

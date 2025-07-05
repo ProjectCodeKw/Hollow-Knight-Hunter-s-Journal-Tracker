@@ -59,7 +59,7 @@ hunter_journal_kills = {
     "Void Tendrils": [0, 1, "Ancient Basin"],
     "Shade": [0, 1, "The Birthplace"],
     "Hunter's Mark": [0, 1, "Hunter's Journal"],
-    "Belfly": [0, 1, "Forgotten Crossroads"],
+    "Belfly": [0, 15, "Forgotten Crossroads"],
     "Bluggsac": [0, 1, "Multiple Locations"],
     "Boofly": [0, 20, "Kingdom's Edge"],
     "Brooding Mawlek": [0, 1, "Forgotten Crossroads"],
