@@ -25,7 +25,7 @@ hunter_journal_kills = {
     "Leaping Husk": [0, 35, "City of Tears"],
     "Husk Bully": [0, 35, "City of Tears"],
     "Husk Warrior": [0, 10, "City of Tears"],
-    "Husk Guard": [0, 6, "City of Tears"],
+    "Husk Guard": [0, 6, "Forgotten Crossroads"],
     "Entombed Husk": [0, 10, "City of Tears"],
     "False Knight": [0, 1, "Forgotten Crossroads"],
     "Maggot": [0, 2, "Forgotten Crossroads"],
