@@ -111,7 +111,7 @@ hunter_journal_kills = {
     "Pilflip": [0, 20, "Royal Waterways"],
     "Primal Aspid": [0, 25, "Kingdom's Edge"],
     "Royal Retainer": [0, 10, "White Palace"],
-    "Shadow Creeper": [0, 20, "Deepnest"],
+    "Shadow Creeper": [0, 20, "Ancient Basin"],
     "Sharp Baldur": [0, 20, "Colosseum of Fools"],
     "Shardmite": [0, 15, "Crystal Peak"],
     "Shrumal Ogre": [0, 8, "Fungal Wastes"],
