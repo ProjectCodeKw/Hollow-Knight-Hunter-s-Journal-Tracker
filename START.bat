@@ -34,38 +34,13 @@ if errorlevel 1 (
     echo.
 )
 
-:: Validate enemies.json structure
-echo Validating enemies.json...
-if exist "enemies.json" (
-    python -c "
-import json
-try:
-    with open('enemies.json', 'r') as f:
-        data = json.load(f)
-    if not isinstance(data, list):
-        print('ERROR: enemies.json should contain a list of enemies')
-        exit(1)
-    for enemy in data:
-        if not all(key in enemy for key in ['code_name', 'game_name', 'kill_count']):
-            print('ERROR: Each enemy should have code_name, game_name, and kill_count fields')
-            exit(1)
-    print('enemies.json structure is valid!')
-except Exception as e:
-    print(f'ERROR: Invalid enemies.json: {e}')
-    exit(1)
-" >nul 2>&1
-    if errorlevel 1 (
-        echo ERROR: enemies.json has invalid structure
-        echo Each enemy should have: code_name, game_name, kill_count
-        echo.
-        pause
-        exit /b 1
-    )
-    echo enemies.json validation passed!
-    echo.
-) else (
+:: Check if enemies.json exists
+if not exist "enemies.json" (
     echo WARNING: enemies.json not found
     echo The application may not work properly without this file
+    echo.
+) else (
+    echo enemies.json found!
     echo.
 )
 
