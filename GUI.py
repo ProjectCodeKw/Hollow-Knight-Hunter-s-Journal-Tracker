@@ -41,7 +41,7 @@ hunter_journal_kills = {
     "Squit": [0, 25, "Greenpath"],
     "Obble": [0, 20, "Greenpath"],
     "Gulka": [0, 15, "Greenpath"],
-    "Maskfly": [0, 15, "Greenpath"],
+    "Maskfly": [0, 15, "Greenpath", "Can not be Tracked (yet)"],
     "Moss Charger": [0, 15, "Greenpath"],
     "Massive Moss Charger": [0, 1, "Greenpath"],
     "Moss Knight": [0, 8, "Greenpath"],
@@ -58,8 +58,6 @@ hunter_journal_kills = {
     "Fungoon": [0, 20, "Fungal Wastes"],
     "Sporg": [0, 20, "Fungal Wastes"],
     "Void Tendrils": [0, 1, "Ancient Basin"],
-    "Shade": [0, 1, "The Birthplace"],
-    "Hunter's Mark": [0, 1, "Hunter's Journal"],
     "Belfly": [0, 15, "Forgotten Crossroads"],
     "Bluggsac": [0, 1, "Multiple Locations"],
     "Boofly": [0, 20, "Kingdom's Edge"],
@@ -120,7 +118,7 @@ hunter_journal_kills = {
     "Soul Master": [0, 1, "Soul Sanctum"],
     "Soul Twister": [0, 20, "Soul Sanctum"],
     "Soul Warrior": [0, 2, "Soul Sanctum"],
-    "Spiny Husk": [0, 20, "City of Tears"],
+    "Spiny Husk": [0, 20, "Queen's Gardens", "Can not be Tracked (yet)"],
     "Stalking Devout": [0, 15, "Deepnest"],
     "Sturdy Fool": [0, 25, "Colosseum of Fools"],
     "Traitor Lord": [0, 1, "Queen's Garden"],
@@ -190,26 +188,37 @@ def update_kill_count():
 
             # check for the case that the enemy does not require a kill but you can kill it
             # there is a change in the royal retainer enemy, it used to require 9 kills now only 1 but in the save file its still 9
-            if (enemy == 'Royal Retainer' and kill_count < 19) \
-                or (enemy == "Void Tendrils" and kill_count < 9) \
-                    or (enemy == "Watcher Knight" and kill_count < 9) \
-                        or (enemy == "Void Tendrils" and kill_count < 9)\
-                             or (enemy == "Goam" and kill_count < 9) \
-                                or (enemy == "Wingmould" and kill_count < 9) \
-                                    or ((enemy == "Bluggsac" and kill_count < 4))\
-                                    or   (enemy == "Hunter's Mark" and kill_count < 1) \
-                                        or   (enemy == "Shade" and kill_count < 1)\
-                                            or   (enemy == "Aluba" and kill_count < 1):
-                values[0] = 1 #special cases
-            elif enemy == 'Aspid Mother':
+            if (
+                (enemy == "Royal Retainer" and kill_count < 19)
+                or (enemy == "Void Tendrils" and kill_count < 9)
+                or (enemy == "Watcher Knight" and kill_count < 9)
+                or (enemy == "Void Tendrils" and kill_count < 9)
+                or (enemy == "Goam" and kill_count < 9)
+                or (enemy == "Wingmould" and kill_count < 9)
+                or ((enemy == "Bluggsac" and kill_count < 4))
+            ):
+                values[0] = 1  # special cases
+            elif enemy == "Menderbug" and kill_count == 1:
+                # mender bug is alive!
+                values[0] = 0
+            elif enemy == "Aspid Mother":
                 import math
+
                 # aspid mother does not have a savefile name it counts on the aspid hatchiling but only 15 are required (hatchelings need 30)
-                values[0] = abs( math.floor( (kill_lookup.get('Aspid Hatchling', 0)/2)) - required_kills)
+                values[0] = abs(
+                    math.floor((kill_lookup.get("Aspid Hatchling", 0) / 2))
+                    - required_kills
+                )
+            elif enemy == "Maskfly" or enemy == "Mossy Vagabond" or enemy=="Spiny Husk":
+                # enemy is not tracked in the savefile... idk their savefile names yet ;(
+                values[0] = 0
             elif required_kills == 1 and kill_count > 0:
                 values[0] = 0
             else:
-                print(enemy, kill_count,required_kills)
-                values[0] = abs(kill_count - required_kills) # requires killing and the requires kills != 0
+                print(enemy, kill_count, required_kills)
+                values[0] = abs(
+                    kill_count - required_kills
+                )  # requires killing and the requires kills != 0
 
             # Preserve required kills and location
             values[1] = required_kills
@@ -388,7 +397,7 @@ def create_main_gui(root):
     def sort_and_update():
         sort_descending[0] = not sort_descending[0]
         if sort_descending[0]:
-            sort_button.config(text="less completed")
+            sort_button.config(text="least completed")
         else:
             sort_button.config(text="most completed")
         update_monster_list()
@@ -560,6 +569,18 @@ def create_main_gui(root):
                 anchor="w",
             )
             location_label.pack(anchor="w")
+            # Display extra info if present
+            if len(kills) > 3 and kills[3]:
+                info_label = tk.Label(
+                    info_frame,
+                    text=str(kills[3]),
+                    font=("Calibri", 8, "italic"),
+                    fg="#a05c00",
+                    bg=bg,
+                    anchor="w",
+                    wraplength=200,
+                )
+                info_label.pack(anchor="w")
             try:
                 img = Image.open(image_path)
                 max_size = (64, 64)
