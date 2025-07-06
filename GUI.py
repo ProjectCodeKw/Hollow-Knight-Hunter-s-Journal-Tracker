@@ -45,7 +45,7 @@ hunter_journal_kills = {
     "Moss Charger": [0, 15, "Greenpath"],
     "Massive Moss Charger": [0, 1, "Greenpath"],
     "Moss Knight": [0, 8, "Greenpath"],
-    "Mossy Vagabond": [0, 10, "Greenpath"],
+    "Mossy Vagabond": [0, 10, "Greenpath",  "Can not be Tracked (yet)"],
     "Durandoo": [0, 8, "Greenpath"],
     "Duranda": [0, 8, "Greenpath"],
     "Aluba": [0, 1, "Queen's Garden"],
