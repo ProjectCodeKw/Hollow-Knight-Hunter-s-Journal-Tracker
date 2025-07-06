@@ -4,6 +4,8 @@ I was going INSANE wanted that COMPLETE hunter achievement but there was no way 
 Thats why i used a little bit of that Pyyyy magic and now i have an external friendly mod that keeps track of my deadly habbits (killing bugs)...
 
 ### Screenshots
+![Achievement](gitImages/achivement.png)
+_Steam Achievement_
 
 ![Main Interface](gitImages/bench.png)
 _Main interface showing enemy list with kill counts_

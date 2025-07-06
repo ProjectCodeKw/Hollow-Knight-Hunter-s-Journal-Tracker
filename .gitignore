@@ -21,6 +21,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+compare_enemies.py
+get_images.py
 
 # PyInstaller
 *.manifest
