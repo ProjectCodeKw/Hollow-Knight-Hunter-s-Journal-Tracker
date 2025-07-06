@@ -215,7 +215,7 @@ def update_kill_count():
             elif required_kills == 1 and kill_count > 0:
                 values[0] = 0
             else:
-                print(enemy, kill_count, required_kills)
+                #print(enemy, kill_count, required_kills)
                 values[0] = abs(
                     kill_count - required_kills
                 )  # requires killing and the requires kills != 0
